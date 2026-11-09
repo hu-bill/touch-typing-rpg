@@ -1,8 +1,2 @@
 node_modules
 dist
-
-# Generated audio renders (re-create with tools/audio-lab)
-audition/*.wav
-
-# Packaged release builds
-*.zip
