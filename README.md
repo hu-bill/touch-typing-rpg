@@ -14,6 +14,7 @@ npm install
 npm run dev        # http://localhost:5173
 npm test           # logic tests (node --test)
 npm run build      # static build in dist/
+npm run release    # build + package spellstroke-itch.zip for itch.io
 ```
 
 ## Controls
