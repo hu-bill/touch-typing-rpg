@@ -20,10 +20,10 @@ function walk(dir) {
   });
 }
 
-// DOS date/time for zip headers.
-const now = new Date();
-const dosTime = (now.getHours() << 11) | (now.getMinutes() << 5) | (now.getSeconds() >> 1);
-const dosDate = ((now.getFullYear() - 1980) << 9) | ((now.getMonth() + 1) << 5) | now.getDate();
+// Fixed DOS timestamp (1980-01-01 00:00) so identical builds produce a byte-identical zip
+// and the tracked file only changes when the game actually changes.
+const dosTime = 0;
+const dosDate = (1 << 5) | 1;
 
 const locals = [];
 const centrals = [];
